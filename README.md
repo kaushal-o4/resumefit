@@ -93,6 +93,8 @@ npm test
 **Kaushal Suryawanshi**
 [GitHub](https://github.com/kaushal-o4) · [LinkedIn](https://www.linkedin.com/in/kaushal-suryawanshi-56272b32b)
 
+💼 **Hiring, or need a web app built?** [Email me](mailto:kaushalsurya9199@gmail.com?subject=Project%20%2F%20Job%20opportunity%20for%20Kaushal) · kaushalsurya9199@gmail.com
+
 If this helped you, please give it a ⭐!
 
 ## License
