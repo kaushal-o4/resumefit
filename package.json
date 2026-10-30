@@ -1,0 +1,11 @@
+{
+  "name": "resumefit",
+  "version": "1.0.0",
+  "description": "Private, in-browser ATS resume checker: match score, missing skills and improvement tips.",
+  "scripts": {
+    "test": "node --test tests/analyzer.test.js",
+    "start": "npx serve ."
+  },
+  "author": "Kaushal Suryawanshi",
+  "license": "MIT"
+}

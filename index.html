@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ResumeFit · ATS Resume Checker</title>
+  <meta name="description" content="Check how well your resume matches a job description. Free, private, runs in your browser." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="src/style.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap">
+      <span class="badge">100% private · nothing leaves your browser</span>
+      <h1>Resume<span>Fit</span></h1>
+      <p>Paste your resume and a job description. Get an ATS-style match score, the skills you're missing, and concrete fixes in under a second.</p>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="inputs">
+      <div class="panel">
+        <div class="panel-head">
+          <h2>1 · Your resume</h2>
+          <label class="file-btn">Upload PDF / TXT
+            <input type="file" id="resumeFile" accept=".pdf,.txt" hidden />
+          </label>
+        </div>
+        <textarea id="resume" placeholder="Paste your resume text here…"></textarea>
+        <small id="resumeCount">0 words</small>
+      </div>
+      <div class="panel">
+        <div class="panel-head">
+          <h2>2 · Job description</h2>
+          <button class="link-btn" id="sampleBtn" type="button">Try a sample</button>
+        </div>
+        <textarea id="jd" placeholder="Paste the job description here…"></textarea>
+        <small id="jdCount">0 words</small>
+      </div>
+    </section>
+
+    <div class="actions">
+      <button id="analyzeBtn" class="primary" type="button">Analyze match</button>
+      <p id="error" class="error" role="alert"></p>
+    </div>
+
+    <section id="results" class="results" hidden>
+      <div class="card score-card">
+        <div class="ring" id="ring"><span id="scoreNum">0</span><small>/100</small></div>
+        <div>
+          <h2 id="verdict"></h2>
+          <ul class="breakdown" id="breakdown"></ul>
+        </div>
+      </div>
+
+      <div class="grid">
+        <div class="card">
+          <h3>✅ Matched skills</h3>
+          <div class="chips" id="matched"></div>
+        </div>
+        <div class="card">
+          <h3>❌ Missing skills</h3>
+          <div class="chips" id="missing"></div>
+        </div>
+        <div class="card">
+          <h3>🔑 Job keywords</h3>
+          <div class="chips" id="keywords"></div>
+        </div>
+        <div class="card">
+          <h3>📊 Skills by category</h3>
+          <div id="categories"></div>
+        </div>
+        <div class="card">
+          <h3>🧾 Resume health checks</h3>
+          <ul class="checks" id="checks"></ul>
+        </div>
+        <div class="card">
+          <h3>💡 How to improve</h3>
+          <ol class="suggestions" id="suggestions"></ol>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap">
+    Built by <a href="https://github.com/kaushal-o4" target="_blank" rel="noopener">Kaushal Suryawanshi</a> ·
+    <a href="https://www.linkedin.com/in/kaushal-suryawanshi-56272b32b" target="_blank" rel="noopener">LinkedIn</a>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+  <script src="src/skills.js"></script>
+  <script src="src/analyzer.js"></script>
+  <script src="src/sample.js"></script>
+  <script src="src/app.js"></script>
+</body>
+</html>
